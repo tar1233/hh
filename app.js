@@ -4,8 +4,7 @@ const port = process.env.PORT || 8081;  // port
 
 // ส่งกลับข้อความ "hello world" เมื่อมี GET request มายังหน้า homepage
 app.get('/', function (req, res) {
-    // res.send('hello world ')
-    res.status(200).send({ message: id });
+    res.send('hello world ')
 })
 app.get('/test', function (req, res) {
     res.send('hello world111 ')
