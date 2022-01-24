@@ -11,7 +11,7 @@ app.get('/test', function (req, res) {
 })
 
 
-app.post('/data/:id',  function (req, res) {
+app.post('/data/:id', function (req, res) {
     const id = req.params.id
     // console.log("testOne", id)
     // console.log("testOne", req)
