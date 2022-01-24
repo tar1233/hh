@@ -27,9 +27,9 @@ app.post('/data/:id', async function (req, res) {
     browser.close()
 
     if (text == null || text == '' ||  text == undefined) {
-        res.status(200).send({ message: id });
+        res.status(200).send({ message: 'หัวข้อ' });
     } else {
-        res.status(200).send({ message: text });
+        res.status(200).send({ message: 'หัวข้อ' });
     }
 })
 
