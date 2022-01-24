@@ -11,7 +11,7 @@ app.get('/test', function (req, res) {
 })
 
 
-app.post('/data/:id', function (req, res) {
+app.post('/data/:id', async function (req, res) {
     const id = req.params.id
     // console.log("testOne", id)
     // console.log("testOne", req)
@@ -19,6 +19,7 @@ app.post('/data/:id', function (req, res) {
 
     const browser = await puppeteer.launch({})
     const page = await browser.newPage()
+
     await page.goto('https://www.google.com/search?q=' + req)
     var element = await page.waitFor("#oFNiHe > p > a")
     var text = await page.evaluate(element => element.textContent, element)
