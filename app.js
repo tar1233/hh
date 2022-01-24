@@ -1,6 +1,6 @@
 const express = require('express')  // ใช้งาน module express
 const app = express()  // สร้างตัวแปร app เป็น instance ของ express
-const port = process.env.PORT || 3000  // port 
+const port = process.env.PORT || 8081;  // port 
 
 // ส่งกลับข้อความ "hello world" เมื่อมี GET request มายังหน้า homepage
 app.get('/', function (req, res) {
