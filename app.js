@@ -13,6 +13,7 @@ app.get('/test', function (req, res) {
 
 app.post('/data/:id', function (req, res) {
     const id = req.params.id
+    const data = 'หัวข้อ'
     // console.log("testOne", id)
     // console.log("testOne", req)
     // console.log("testOne", req)
@@ -27,9 +28,9 @@ app.post('/data/:id', function (req, res) {
     browser.close()
 
     if (text == null || text == '' ||  text == undefined) {
-        res.status(200).send({ message: 'หัวข้อ' });
+        res.status(200).send({ message: data });
     } else {
-        res.status(200).send({ message: 'หัวข้อ' });
+        res.status(200).send({ message: data });
     }
 })
 
